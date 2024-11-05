@@ -1,7 +1,7 @@
 Hello, world!
 
-# Another page
-[See another page](/another-page.html)
+# Math Notes
+[Piskunov's calculus](/math-notes/piskunov-calculus/Piskunov-Calculus.pdf)
 
 # Cheatsheets
 Python packages:
