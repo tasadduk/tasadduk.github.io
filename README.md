@@ -2,4 +2,5 @@
 
 Hello, world!
 
-Things are coming soon! :)
+## Another page
+[See another page](/another-page.html)
