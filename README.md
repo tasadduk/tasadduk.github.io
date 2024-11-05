@@ -5,5 +5,4 @@ Hello, world!
 
 # Cheatsheets
 Python packages:
-* [Pandas](/cheatsheets/python-pandas.html)
 * [Pandas](/cheatsheets/python-pandas.md)
