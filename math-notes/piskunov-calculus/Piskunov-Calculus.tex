@@ -1,0 +1,67 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+\title{Multivariable Calculus Notes}
+\author{Tasadduk Chowdhury}
+\date{\today}
+\maketitle
+
+
+\section{Multiple Integrals}
+
+These notes were taken from chapter 2 in \cite{piskunov2}. I don't go over the definition or construction of integrals here, but if you're interested, please read the book.
+
+
+\subsection{Double Integrals}
+
+We assume that a domain of integration $D$ is always \emph{closed}. This means that $D$ is bounded by a closed curve and the points lying on the boundary belongs to $D$.
+
+A \emph{double integral} of a function $f(x,y)$ over the region or domain $D$ is notated
+$$ \iint_D f(x,y) \, dx \, dy $$
+Sometimes instead of writing $dy \, dy$, it is written $ds$ which represents the area of a infinitesimally small subregion of $D$.
+
+
+\subsection*{Some properties}
+
+\begin{enumerate}
+\item If $f(x,y) \geq 0$, then $\iint_D f(x,y) \, ds$ is the volume of the solid bounded by the surface $z = f(x,y)$, the plane $z = 0$, and a cylindrical surface whose generators are parallel to the z-axis, while the directrix is the boundary of the domain $D$.
+\item For two functions $f(x,y)$ and $g(x,y)$, and any constant $c$, 
+$$\iint_D [c f(x,y)  + g(x,y) ] \, ds = c \iint_D f(x,y) \, ds + \iint_D g(x,y) \, ds. $$
+\item If a region $D$ is divided into disjoint regions $D_1$ and $D_2$, then
+$$ \iint_D f(x,y) \, ds = \iint_{D_1} f(x,y) \, ds + \iint_{D_2} f(x,y) \, ds. $$
+\end{enumerate}
+
+
+\subsection{Calculating Double Integrals}
+
+In order to explicitly compute double integrals, we consider two kinds of closed regions in the $xy$-plane:
+\begin{itemize}
+\item \emph{Type I region}: bounded by the continuous functions $y = \phi_1(x)$ and $y = \phi_2(x)$, and the parallel lines $x = a$ and $x = b$, where $\phi_1(x) \leq \phi_2(x)$ and $a \leq b$. The book calls this kind of region \emph{regular in the $y$-direction}.
+\item \emph{Type II region}: bounded by the continuous functions $x = \psi_1(y)$ and $x = \psi_2(y)$, and the parallel lines $y = c$ and $y = d$, where $\psi_2(y)$ is always to the right of $\psi_1(y)$ for all $y$ in the domain of interest, and $c \leq d$. The book calls this kind of region \emph{regular in the $x$-direction}.
+\end{itemize}
+
+If $D$ is a type I region, then it can be computed as a \emph{two-fold iterated integral}:
+$$ \iint_D f(x,y) \, dy \, dx = \int_a^b \left( \int_{\phi_1(x)}^{\phi_2(x)} f(x,y) \, dy \right) \, dx.$$
+
+Similarly, if $D$ is a type II region, then it can be computed by the iterated integral:
+$$ \iint_D f(x,y) \, dy \, dx = \int_c^d \left( \int_{\psi_1(y)}^{\psi_2(y)} f(x,y) \, dx \right) \, dy.$$
+
+
+
+
+% TODO:
+% - mean value theorem
+
+
+
+\begin{thebibliography}{9}
+
+\bibitem{piskunov2}
+Piskunov, Nikolai. \textit{Differential and integral calculus: volume 2}. Moscow: Mir Publishers, 1974.
+
+  
+\end{thebibliography}
+
+\end{document}
