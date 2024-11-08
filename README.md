@@ -1,7 +1,3 @@
----
-layout: home
----
-
 Hello, world!
 
 # Math Notes
